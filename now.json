@@ -1,0 +1,11 @@
+
+{
+  "name": "liftit-test-api",
+  "env": {
+      "PORT": "8000",
+      "JWT_SECRET" : "@JWT_SECRET"
+  },
+  "builds": [
+    { "src": "src/index.js", "use": "@now/node"  }
+  ]
+}
