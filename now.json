@@ -1,11 +1,18 @@
 
 {
-  "name": "liftit-test-api",
+  "name": "liftit-api",
+  "type": "docker",
+  "version": 1,
   "env": {
-      "PORT": "8000",
-      "JWT_SECRET" : "@JWT_SECRET"
-  },
-  "builds": [
-    { "src": "src/index.js", "use": "@now/node"  }
-  ]
+    "DB_SRV": "true",
+    "DB_USERNAME": "@db_username",
+    "DB_PASSWORD": "@db_password",
+    "DB_HOST": "@db_host",
+    "DB_DATABASE": "@db_database",
+    "MAIL_HOST": "smtp.mailtrap.io",
+    "MAIL_PORT": "@mail_port",
+    "JWT_SECRET": "@jwt_secret_1",
+    "MAIL_USER": "@mail_user",
+    "MAIL_PASS": "@mail_pass"
+  }
 }

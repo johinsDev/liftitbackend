@@ -8,11 +8,12 @@ class Database {
   constructor({ host, dbname, port, srv, user, password }) {
 
     const server = srv === 'true' ? 'mongodb+srv' : 'mongodb';
-    const PORT = srv === 'true' ? `:${ port }` : '';
+    const PORT = port || '';
     const auth = srv === 'true' ? `${ user }:${ password }@` : '';
 
     this.url = `${ server }://${ auth }${ host }${ PORT }/${ dbname }`;
 
+    console.log(this.url)
     this.connect();
   }
 

@@ -1,4 +1,6 @@
+import 'babel-polyfill';
 import "dotenv/config";
+
 import express from 'express';
 import path from 'path';
 import Config from './services/config';
